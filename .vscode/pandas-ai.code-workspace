@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "PandasAI",
+      "path": "../",
+      "exclude": ["../client/**", "../server/**"]
+    },
+    {
+      "name": "Server", 
+      "path": "../server"
+    },
+    {
+      "name": "Client",
+      "path": "../client"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/*.pyc": true,
+      ".pytest_cache": true,
+      "**/node_modules": true,
+      "**/.next": true,
+      "client": true,
+      "server": true
+    }
+  }
+}

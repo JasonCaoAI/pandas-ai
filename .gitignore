@@ -36,9 +36,6 @@ exports/
 # logs
 *.log
 
-# vscode
-.vscode
-
 # coverage
 .coverage
 coverage.xml

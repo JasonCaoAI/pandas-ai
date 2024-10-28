@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Server",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder:Server}/main.py",
+      "cwd": "${workspaceFolder:Server}",
+      "python": "${workspaceFolder:Server}/.venv/bin/python",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder:Server}:${env:PYTHONPATH}",
+        "POETRY_ACTIVE": "1",
+      },
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "preLaunchTask": "load-env"
+    },
+    {
+      "name": "Debug PandasAI",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${workspaceFolder:PandasAI}",
+      "python": "${workspaceFolder:PandasAI}/.venv/bin/python",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder:PandasAI}:${env:PYTHONPATH}"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Debug Client",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "cwd": "${workspaceFolder:Client}",
+      "serverReadyAction": {
+        "pattern": "- Local:.+(https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      }
+    }
+  ],
+}

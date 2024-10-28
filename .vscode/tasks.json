@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "load-env",
+            "type": "shell",
+            "command": "source .env",
+            "options": {
+                "cwd": "${workspaceFolder}/server"
+            }
+        }
+    ]
+}
