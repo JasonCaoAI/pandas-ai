@@ -19,9 +19,8 @@ sys.path.append(parent_dir)
 # access to the values within the .ini file in use.
 config = context.config
 fileConfig(config.config_file_name)
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
-
-print(parent_dir)
+sys.path.insert(0, os.path.dirname(
+    os.path.dirname(os.path.realpath(__file__))))
 
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
@@ -62,7 +61,8 @@ async def run_migrations_online():
     In this scenario we need to create an Engine
     and associate a connection with the context.
     """
-    connectable = create_async_engine(app_config.POSTGRES_URL, poolclass=pool.NullPool)
+    connectable = create_async_engine(
+        app_config.POSTGRES_URL, poolclass=pool.NullPool)
 
     async with connectable.connect() as connection:
         await connection.run_sync(do_run_migrations)

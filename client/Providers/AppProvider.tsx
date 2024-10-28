@@ -55,7 +55,7 @@ export default function AppProvider({ children }: { children: ReactNode }) {
           </NoSSR>
         </ErrorBoundary>
       </RollbarProvider>
-      <Intercom appID={NEXT_PUBLIC_INTERCOM_APP_ID} />
+      <Intercom appID={NEXT_PUBLIC_INTERCOM_APP_ID} hideDefaultLauncher={true} />
     </>
   );
 }

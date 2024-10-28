@@ -18,6 +18,9 @@ make install
 
 /bin/sh wait-for-it.sh
 
+# Add the current directory to PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:/app
+
 # Run database migrations
 make migrate
 

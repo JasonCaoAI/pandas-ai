@@ -49,7 +49,7 @@ start: ## Starts the server
 .PHONY: migrate
 migrate: ## Run the migrations
 	@eval "$(shell sed 's/=.*//' .env | xargs echo export)"
-	poetry run alembic upgrade head
+	PYTHONPATH=$PYTHONPATH:. poetry run alembic upgrade head
 
 .PHONY: rollback
 rollback: ## Rollback migrations one level
