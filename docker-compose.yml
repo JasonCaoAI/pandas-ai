@@ -12,37 +12,37 @@ services:
     networks:
       - pandabi-network
 
-  server:
-    container_name: pandabi-backend
-    build:
-      context: ./server
-      dockerfile: Dockerfile
-    ports:
-      - "8000:8000"
-    restart: always
-    env_file:
-      - ./server/.env
-    depends_on:
-      - postgresql
-    networks:
-      - pandabi-network
-    command: "/bin/bash startup.sh"
+  # server:
+  #   container_name: pandabi-backend
+  #   build:
+  #     context: ./server
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8000:8000"
+  #   restart: always
+  #   env_file:
+  #     - ./server/.env
+  #   depends_on:
+  #     - postgresql
+  #   networks:
+  #     - pandabi-network
+  #   command: "/bin/bash startup.sh"
 
-  client:
-    container_name: pandabi-frontend
-    build:
-      context: ./client
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    restart: always
-    env_file:
-      - ./client/.env
-    environment:
-      - NODE_ENV=development
-    command: npm run start
-    networks:
-      - pandabi-network
+  # client:
+  #   container_name: pandabi-frontend
+  #   build:
+  #     context: ./client
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "3000:3000"
+  #   restart: always
+  #   env_file:
+  #     - ./client/.env
+  #   environment:
+  #     - NODE_ENV=development
+  #   command: npm run start
+  #   networks:
+  #     - pandabi-network
 
 networks:
   pandabi-network:

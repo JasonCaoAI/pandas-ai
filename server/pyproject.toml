@@ -3,6 +3,7 @@ name = "pandasai-server"
 version = "0.1.0"
 description = "PandasAI Server"
 authors = ["Arslan <arslan@sinaptik.ai>"]
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -23,12 +24,12 @@ asyncpg = "^0.29.0"
 greenlet = "^3.0.3"
 python-jose = "^3.3.0"
 pylint = "^3.2.2"
-pandasai = "^2.1"
+pandasai = {extras = ["seaborn"], version = "^2.4.0"}
 pyyaml = "^6.0.1"
 passlib = "^1.7.4"
 bcrypt = "3.1.7"
 python-dotenv = "^1.0.1"
-psycopg2 = "^2.9.9"
+psycopg2-binary = "^2.9.9"
 numpy = "1.26.4"
 python-multipart = "^0.0.9"
 

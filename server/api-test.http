@@ -1,0 +1,14 @@
+# api-test.http
+
+### Get OpenAPI Schema
+GET http://localhost:8000/openapi.json
+
+### Get Swagger UI
+GET http://localhost:8000/docs
+
+### Get ReDoc UI
+GET http://localhost:8000/redoc
+
+### get user
+GET http://localhost:8000/api/users/me
+Content-Type: application/json
